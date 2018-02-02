@@ -1,4 +1,4 @@
-function hrtf=read_cipic_hrtf(subject_index,Ia,Ie,channel)
+function hrir=read_cipic_hrir(subject_index,Ia,Ie,channel)
 %% Find path to hrir data files
 data_path_head='E:\Matlab\HRTF¿â\subject_';
 data_path_tail = '\hrir_final.mat';
@@ -13,12 +13,12 @@ load(Fname);
 if(channel == 'l')    
     hl = hrir_l( Ia ,Ie,:);
     for i=1:200
-        hrtf(i) = hl(i);
+        hrir(i) = hl(i);
     end
 elseif(channel == 'r')
     hr = hrir_r( Ia ,Ie,:);
     for i=1:200
-        hrtf(i) = hr(i);
+        hrir(i) = hr(i);
     end
 end
 
