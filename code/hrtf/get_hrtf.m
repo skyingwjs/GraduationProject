@@ -7,9 +7,12 @@ azimuth_index=find(azimuth_cipic==azimuth);%获得方位角在CIPIC库中对应的的索引值
 elevation_cipic=-45:360/64:235;
 elevation_index=find(elevation_cipic==elevation);%获得高度角在CIPIC库中对应的的索引值
 
-%读取hrir数据
+%从cipic库读取hrir数据
 hrir_l= read_cipic_hrir(subject_index,azimuth_index,elevation_index,'l');
 hrir_r= read_cipic_hrir(subject_index,azimuth_index,elevation_index,'r');
 
+%将hrir数据作fft作1024点fft变换得到hrtf
 hrtf(:,1)=fft(hrir_l,1024);
 hrtf(:,2)=fft(hrir_r,1024);
+
+end

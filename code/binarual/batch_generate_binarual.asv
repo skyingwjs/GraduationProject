@@ -1,0 +1,26 @@
+%批量生成单声源双耳信号及扬声器合成的双耳信号
+
+
+single_binarual_path='.\output\single\';
+three_binarual_path='.\output\three\';
+hrtf_path='.\hrtf\';
+addpath(genpath(hrtf_path));
+
+subject_index=1;
+wav_file_name='white_noise_0dB.wav';
+[source_theta speaker_theta]=get_source_speaker_group();
+source_num=length(source_theta);
+
+for n=1:source_num
+    s_theta=source_theta(n);
+    sp_theta=speaker_theta(n);
+    
+    single_binarual_file_name=strcat('single_',num2str(s_theta(1)),'_',num2str(s_theta(2)),'_',wav_file_name);
+    single_binarual_file_name=strcat('single_',num2str(s_theta(1)),'_',num2str(s_theta(2)),'_',wav_file_name);
+    
+    
+    generate_single_binarual(wav_file_name,subject_index,s_theta(1),s_theta(2),)
+end
+
+generate_single_binarual(wav_file_name,subject_index,azimuth,elevation,binarual_file_name)
+generate_synthesis_binarual(wav_file_name,subject_index,source_theta,speaker_theta,type,binarual_file_name)

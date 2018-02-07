@@ -18,7 +18,7 @@ elevation_index=find(elevation_cipic==elevation);%»ñµÃ¸ß¶È½ÇÔÚCIPIC¿âÖĞ¶ÔÓ¦µÄµÄË
 hrir_l= read_cipic_hrir(subject_index,azimuth_index,elevation_index,'l');
 hrir_r= read_cipic_hrir(subject_index,azimuth_index,elevation_index,'r');
 
-%¾í»ıÉú³ÉË«¶úĞÅºÅ  Õû¸öwavÎÄ¼şÓëhrirÊı¾İ×÷¾í»ı
+%ÂË²¨Éú³ÉË«¶úĞÅºÅ£¬Ïàµ±ÓÚ¾í»ı²Ù×÷
 binarual_l=filter(hrir_l,1,wav_data);
 binarual_r=filter(hrir_r,1,wav_data);
 
