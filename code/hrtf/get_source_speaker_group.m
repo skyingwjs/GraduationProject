@@ -3,7 +3,6 @@
 %sp_theta     30*2 每三行构成一个扬声器组，共10组
 
 function [source_theta,sp_theta]=get_source_speaker_group()
-
 % cipic库中azi与elev的变化范围
 % azimuth_range= [-80 -65 -55 -45:5:45 55 65 80]';
 % elevation_range=[-45:360/64:235]';
@@ -38,3 +37,5 @@ source_theta=[source_theta_front;source_theta_left;source_theta_right;source_the
 sp_theta=[sp_theta_front;sp_theta_left;sp_theta_right;sp_theta_back;sp_theta_up];
 
 end
+
+

@@ -9,8 +9,6 @@
 
 function binarual=generate_synthesis_binarual(wav_file_name,subject_index,source_theta,speaker_theta,type,binarual_file_name)
 
-
-
 %添加被调用函数相关路径
 hrtf_path='..\hrtf\';
 addpath(genpath(hrtf_path))
