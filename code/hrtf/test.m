@@ -22,6 +22,3 @@
 [source_theta,sp_theta]=get_source_speaker_group();
 
 
-vbap_source_theta
-vbap_sp_theta
-
